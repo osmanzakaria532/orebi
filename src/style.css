@@ -1,0 +1,55 @@
+.navlist,
+.categoryMenu,
+.userAccount {
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.show {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+
+.banner .slick-active div {
+    font-size: 10px !important;
+    color: black !important;
+    border-color: black !important;
+}
+
+.newArrives .slick-slide > div {
+    margin: 0 20px;
+}
+
+/* .newArrivesCopy .slick-track {
+  margin: 0 20px;
+} */
+
+.newArrives .slick-slide > div {
+    margin: 0 20px;
+}
+
+.pagination ul li button {
+    color: #000;
+    background: #fff;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    font-size: 14px;
+    height: 36px;
+    width: 36px;
+    font-family: "DM sans";
+}
+.css-19xm0h7-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected {
+    color: #fff;
+    background-color: #000 !important;
+}
