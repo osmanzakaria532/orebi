@@ -37,20 +37,23 @@ const Navbar = () => {
         <>
             <nav className="bg-white">
                 <Container className="md:max-w-container mx-auto py-5 md:py-8 px-3 flex items-center justify-between relative">
-                    <Image href="#" src={n_logo} alt="logo" />
+                    <Image href="/" src={n_logo} alt="logo" />
 
                     <List className="navlist opacity-0 md:opacity-100 invisible md:visible gap-x-10 absolute left-0 top-full md:static flex-col md:flex-row bg-slate-400 md:bg-transparent w-full md:w-auto  text-center hover:bg-red-400 md:hover:bg-transparent z-50">
                         <LiItem
                             liInnerContent="home"
                             className="!text-[#262626]"
+                            href="/"
                         />
                         <LiItem
                             liInnerContent="shop"
                             className="text-[#767676] hover:text-[#262626]"
+                            href="/shop"
                         />
                         <LiItem
                             liInnerContent="about"
                             className="text-[#767676] hover:text-[#262626]"
+                            href="/about"
                         />
                         <LiItem
                             liInnerContent="Contacts"

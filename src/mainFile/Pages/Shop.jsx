@@ -6,9 +6,11 @@ import Image from "../components/components-layer/Image";
 // import { IoGrid } from "react-icons/io5";
 import { FaAngleDown, FaPlus } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
+import { IoGrid } from "react-icons/io5";
+import { AiOutlineBars } from "react-icons/ai";
 
-import grid_1 from "../../../src/assets/Grid_1.svg";
-import grid_2 from "../../../src/assets/Grid_2.svg";
+// import grid_1 from "../../../src/assets/Grid_1.svg";
+// import grid_2 from "../../../src/assets/Grid_2.svg";
 import Product from "../components/components-layer/Product";
 
 import pro_1 from "../../../src/assets/pro_1.jpg";
@@ -24,15 +26,15 @@ import pro_9 from "../../../src/assets/pro_9.jpg";
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
 import Filter from "../components/components-layer/Filter";
-import { Link } from "react-router-dom";
 
-const Products = () => {
+const Shop = () => {
     return (
         <>
             <div>
                 <Container className="px-3">
                     <Bredcumd />
                     <div className="flex justify-between">
+                        {/* left section */}
                         <div className="w-[370px]">
                             <div>
                                 <div className="mb-[53px]">
@@ -115,8 +117,9 @@ const Products = () => {
                                 </div>
                             </div>
                         </div>
+                        {/* right section */}
                         <div className="w-[1180px]">
-                            <div className="flex justify-between items-center mb-[60px]">
+                            {/* <div className="flex justify-between items-center mb-[60px]">
                                 <div className="flex gap-x-[20px]">
                                     <Image src={grid_1} className="!w-auto" />
                                     <Image src={grid_2} className="!w-auto" />
@@ -153,6 +156,33 @@ const Products = () => {
                                                 <FaAngleDown />
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div> */}
+                            {/* top filter header */}
+                            <div className="mb-[60px] flex justify-between">
+                                <div className="flex items-center gap-5">
+                                    <div className="w-9 h-9 bg-black border border-[#F0F0F0] flex justify-center items-center cursor-pointer">
+                                        <IoGrid className="text-sm text-white" />
+                                    </div>
+                                    <div className="w-9 h-9 border border-[#F0F0F0] flex justify-center items-center cursor-pointer">
+                                        <AiOutlineBars className="text-sm" />
+                                    </div>
+                                </div>
+                                <div className="flex items-center gap-10">
+                                    <div className="flex items-center gap-[14px]">
+                                        <p>Sort by:</p>
+                                        <select name="" id="">
+                                            <option value="Featured">
+                                                Featured
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div className="flex items-center gap-[14px]">
+                                        <p>show:</p>
+                                        <select name="" id="">
+                                            <option value="306">36</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -237,4 +267,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default Shop;
