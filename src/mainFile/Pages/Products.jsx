@@ -3,8 +3,9 @@ import Container from "../components/components-layer/Container";
 import Bredcumd from "../components/components-layer/Bredcumd";
 import Image from "../components/components-layer/Image";
 
-import { IoGrid } from "react-icons/io5";
+// import { IoGrid } from "react-icons/io5";
 import { FaAngleDown, FaPlus } from "react-icons/fa6";
+import { FaCaretDown } from "react-icons/fa";
 
 import grid_1 from "../../../src/assets/Grid_1.svg";
 import grid_2 from "../../../src/assets/Grid_2.svg";
@@ -22,6 +23,8 @@ import pro_9 from "../../../src/assets/pro_9.jpg";
 
 import Pagination from "@mui/material/Pagination";
 import Stack from "@mui/material/Stack";
+import Filter from "../components/components-layer/Filter";
+import { Link } from "react-router-dom";
 
 const Products = () => {
     return (
@@ -32,15 +35,84 @@ const Products = () => {
                     <div className="flex justify-between">
                         <div className="w-[370px]">
                             <div>
-                                <h4 className="text-Primary_1 text-[20px] font-DM font-bold mb-[35px]">
-                                    Shop by Category
-                                </h4>
-                                <p className="flex justify-between items-center border-b pb-[21px] text-Primary_2 mb-[20px]">
-                                    Category 1 <FaPlus />
-                                </p>
-                                <p className="flex justify-between items-center border-b pb-[21px] text-Primary_2 mb-[20px]">
-                                    Category 1 <FaPlus />
-                                </p>
+                                <div className="mb-[53px]">
+                                    <h4 className="text-Primary_1 text-[20px] font-DM font-bold mb-[35px]">
+                                        Shop by Category
+                                    </h4>
+                                    <ul>
+                                        <Filter
+                                            categoryName="Category 1"
+                                            icon={
+                                                <FaPlus className="cursor-pointer" />
+                                            }
+                                        />
+                                        <Filter categoryName="Category 2" />
+                                        <Filter
+                                            categoryName="Category 3"
+                                            icon={
+                                                <FaPlus className="cursor-pointer" />
+                                            }
+                                        />
+                                        <Filter categoryName="Category 4" />
+                                        <Filter categoryName="Category 4" />
+                                    </ul>
+                                    <p></p>
+                                </div>
+                                <div className="mb-[53px]">
+                                    <h4 className="text-Primary_1 text-[20px] font-DM font-bold mb-[35px] flex justify-between items-center">
+                                        Shop by Color
+                                        <FaCaretDown className="cursor-pointer" />
+                                    </h4>
+                                    <ul>
+                                        <Filter
+                                            categoryName="Color 1"
+                                            className="pl-5 relative after:absolute after:content-[''] after:w-[11px] after:h-[11px] after:left-0 after:top-1/2 after:-translate-y-1/2 after:bg-black after:rounded-full"
+                                        />
+                                        <Filter
+                                            categoryName="Color 2"
+                                            className="pl-5 relative after:absolute after:content-[''] after:w-[11px] after:h-[11px] after:left-0 after:top-1/2 after:-translate-y-1/2 after:bg-[#FF8686] after:rounded-full"
+                                        />
+                                        <Filter
+                                            categoryName="Color 3"
+                                            className="pl-5 relative after:absolute after:content-[''] after:w-[11px] after:h-[11px] after:left-0 after:top-1/2 after:-translate-y-1/2 after:bg-[#7ED321] after:rounded-full"
+                                        />
+                                        <Filter
+                                            categoryName="Color 4"
+                                            className="pl-5 relative after:absolute after:content-[''] after:w-[11px] after:h-[11px] after:left-0 after:top-1/2 after:-translate-y-1/2 after:bg-[#B6B6B6] after:rounded-full"
+                                        />
+                                        <Filter
+                                            categoryName="Color 5"
+                                            className="pl-5 relative after:absolute after:content-[''] after:w-[11px] after:h-[11px] after:left-0 after:top-1/2 after:-translate-y-1/2 after:bg-[#15CBA5] after:rounded-full"
+                                        />
+                                    </ul>
+                                    <p></p>
+                                </div>
+                                <div className="mb-[53px]">
+                                    <h4 className="text-Primary_1 text-[20px] font-DM font-bold mb-[35px] flex justify-between items-center">
+                                        Shop by Brand
+                                        <FaCaretDown className="cursor-pointer" />
+                                    </h4>
+                                    <ul>
+                                        <Filter categoryName="Brand 1" />
+                                        <Filter categoryName="Brand 2" />
+                                        <Filter categoryName="Brand 3" />
+                                        <Filter categoryName="Brand 4" />
+                                        <Filter categoryName="Brand 5" />
+                                    </ul>
+                                </div>
+                                <div className="mb-[53px]">
+                                    <h4 className="text-Primary_1 text-[20px] font-DM font-bold mb-[35px] flex justify-between items-center">
+                                        Shop by Price
+                                        <FaCaretDown className="cursor-pointer" />
+                                    </h4>
+                                    <ul>
+                                        <Filter categoryName="$0.00 - $9.99" />
+                                        <Filter categoryName="$0.00 - $9.99" />
+                                        <Filter categoryName="$0.00 - $9.99" />
+                                        <Filter categoryName="$0.00 - $9.99" />
+                                        <Filter categoryName="$0.00 - $9.99" />
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="w-[1180px]">
