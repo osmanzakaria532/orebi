@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
-// import ReactDOM from 'react-dom';
 
 import "../components-layer/paginations.css";
 import Product from "./Product";
@@ -18,147 +17,771 @@ import pro_9 from "../../../../src/assets/pro_9.jpg";
 const items = [
     {
         img: pro_1,
+        tag: "new",
     },
     {
         img: pro_2,
+        tag: "old",
     },
     {
         img: pro_3,
+        tag: "new",
     },
     {
         img: pro_4,
+        tag: "new",
     },
     {
         img: pro_5,
+        tag: "old",
     },
     {
         img: pro_6,
+        tag: "old",
     },
     {
         img: pro_7,
+        tag: "new",
     },
     {
         img: pro_9,
+        tag: "new",
     },
     {
         img: pro_4,
+        tag: "new",
     },
     {
         img: pro_8,
+        tag: "old",
     },
     {
         img: pro_9,
+        tag: "old",
     },
     {
         img: pro_7,
+        tag: "old",
     },
     {
         img: pro_5,
+        tag: "old",
     },
     {
         img: pro_2,
+        tag: "new",
     },
     {
         img: pro_3,
+        tag: "new",
     },
     {
         img: pro_1,
+        tag: "new",
     },
     {
         img: pro_3,
+        tag: "new",
     },
     {
         img: pro_9,
+        tag: "new",
     },
     {
         img: pro_7,
+        tag: "old",
     },
     {
         img: pro_9,
+        tag: "old",
     },
     {
         img: pro_4,
+        tag: "old",
     },
     {
         img: pro_7,
+        tag: "old",
     },
     {
         img: pro_2,
+        tag: "new",
     },
     {
         img: pro_7,
+        tag: "new",
     },
     {
         img: pro_8,
+        tag: "old",
     },
     {
         img: pro_7,
+        tag: "old",
     },
     {
         img: pro_5,
+        tag: "old",
     },
     {
         img: pro_6,
+        tag: "new",
     },
     {
         img: pro_1,
+        tag: "new",
     },
     {
         img: pro_2,
+        tag: "new",
     },
     {
         img: pro_9,
+        tag: "new",
     },
     {
         img: pro_3,
+        tag: "new",
     },
     {
         img: pro_4,
+        tag: "new",
     },
     {
         img: pro_8,
+        tag: "new",
     },
     {
         img: pro_9,
+        tag: "new",
     },
     {
         img: pro_7,
+        tag: "new",
     },
     {
         img: pro_1,
+        tag: "new",
     },
     {
         img: pro_2,
+        tag: "new",
     },
     {
         img: pro_6,
+        tag: "old",
     },
     {
         img: pro_1,
+        tag: "old",
     },
     {
         img: pro_3,
+        tag: "old",
     },
     {
         img: pro_5,
+        tag: "old",
     },
     {
         img: pro_7,
+        tag: "old",
     },
     {
         img: pro_9,
+        tag: "new",
     },
     {
         img: pro_4,
+        tag: "new",
     },
     {
         img: pro_8,
+        tag: "new",
     },
     {
         img: pro_2,
+        tag: "new",
     },
     {
         img: pro_1,
+        tag: "old",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "old",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_6,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "old",
+    },
+    {
+        img: pro_4,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_6,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_6,
+        tag: "old",
+    },
+    {
+        img: pro_1,
+        tag: "old",
+    },
+    {
+        img: pro_3,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "old",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "old",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_6,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "old",
+    },
+    {
+        img: pro_4,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_6,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_6,
+        tag: "old",
+    },
+    {
+        img: pro_1,
+        tag: "old",
+    },
+    {
+        img: pro_3,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "old",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "old",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_6,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "old",
+    },
+    {
+        img: pro_4,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_6,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "new",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_7,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_6,
+        tag: "old",
+    },
+    {
+        img: pro_1,
+        tag: "old",
+    },
+    {
+        img: pro_3,
+        tag: "old",
+    },
+    {
+        img: pro_5,
+        tag: "old",
+    },
+    {
+        img: pro_7,
+        tag: "old",
+    },
+    {
+        img: pro_9,
+        tag: "new",
+    },
+    {
+        img: pro_4,
+        tag: "new",
+    },
+    {
+        img: pro_8,
+        tag: "new",
+    },
+    {
+        img: pro_2,
+        tag: "new",
+    },
+    {
+        img: pro_1,
+        tag: "old",
     },
 ];
 
@@ -170,7 +793,7 @@ function Items({ currentItems }) {
                     currentItems.map((item) => (
                         <Product
                             productImg={item.img}
-                            tagInnerContent="New"
+                            tagInnerContent={item.tag}
                             tagClassName="w-[92px] h-[35px]"
                         />
                     ))}
@@ -184,17 +807,11 @@ const Paginations = ({ itemsPerPage }) => {
 
     const endOffset = itemOffset + itemsPerPage;
 
-    // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-
     const currentItems = items.slice(itemOffset, endOffset);
     const pageCount = Math.ceil(items.length / itemsPerPage);
 
-    // Invoke when user click to request another page.
     const handlePageClick = (event) => {
         const newOffset = (event.selected * itemsPerPage) % items.length;
-        // console.log(
-        //     `User requested page number ${event.selected}, which is offset ${newOffset}`
-        // );
         setItemOffset(newOffset);
     };
 

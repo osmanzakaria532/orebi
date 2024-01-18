@@ -1,22 +1,13 @@
 import React, { useState } from "react";
 import Container from "../components/components-layer/Container";
 import Bredcumd from "../components/components-layer/Bredcumd";
-// import Image from "../components/components-layer/Image";
-
-// import { IoGrid } from "react-icons/io5";
-import { FaAngleDown, FaPlus } from "react-icons/fa6";
+import { FaPlus } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import { IoGrid } from "react-icons/io5";
 import { AiOutlineBars } from "react-icons/ai";
 
-// import grid_1 from "../../../src/assets/Grid_1.svg";
-// import grid_2 from "../../../src/assets/Grid_2.svg";
-// import Product from "../components/components-layer/Product";
-
-import Pagination from "@mui/material/Pagination";
-import Stack from "@mui/material/Stack";
 import Filter from "../components/components-layer/Filter";
-import Paginations from "../components/components-layer/Paginations";
+import Paginations from "../../../src/mainFile/components/components-layer/Paginations";
 
 const Shop = () => {
     const [showProduct, setShowProduct] = useState(12);
@@ -151,18 +142,6 @@ const Shop = () => {
                                     </div>
                                 </div>
                             </div>
-                            {/* pagination section */}
-                            {/* <div className="pagination mt-[50px]">
-                                <Stack spacing={2}>
-                                    <Pagination
-                                        count={10}
-                                        variant="outlined"
-                                        shape="rounded"
-                                        hidePrevButton
-                                        hideNextButton
-                                    />
-                                </Stack>
-                            </div> */}
                             <Paginations itemsPerPage={showProduct} />
                         </div>
                     </div>

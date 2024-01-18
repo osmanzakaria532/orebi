@@ -12,7 +12,7 @@ const Product = ({ productImg, tagInnerContent, tagClassName }) => {
                         <Image className="" src={productImg} />
                         <ProductTag
                             children={tagInnerContent}
-                            tagClassName={tagClassName}
+                            tagClassName={` capitalize ${tagClassName}`}
                         />
                     </div>
                     <div className="absolute bottom-0 w-full bg-white h-[156px] py-[25px] invisible group-hover:h-[156px] group-hover:visible transition">
