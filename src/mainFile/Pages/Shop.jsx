@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Container from "../components/components-layer/Container";
 import Bredcumd from "../components/components-layer/Bredcumd";
 import { FaPlus } from "react-icons/fa6";
 import { FaCaretDown } from "react-icons/fa";
 import { IoGrid } from "react-icons/io5";
 import { AiOutlineBars } from "react-icons/ai";
+import { FaFilter } from "react-icons/fa6";
 
 import Filter from "../components/components-layer/Filter";
 import Paginations from "../../../src/mainFile/components/components-layer/Paginations";
@@ -16,15 +17,24 @@ const Shop = () => {
         let showNumber = Number(e.target.value);
         setShowProduct(showNumber);
     };
+    // let [show, setShow] = useState(false);
+
+    // useEffect(() => {
+    //     if (window.innerWidth > 768) {
+    //         setShow(false);
+    //     } else {
+    //         setShow(true);
+    //     }
+    // }, []);
 
     return (
         <>
             <div>
                 <Container className="px-3">
                     <Bredcumd />
-                    <div className="flex justify-between">
+                    <div className="flex justify-between relative">
                         {/* left section */}
-                        <div className="w-[370px]">
+                        <div className="w-full md:w-[370px] absolute z-10 md:static">
                             <div>
                                 <div className="mb-[53px]">
                                     <h4 className="text-Primary_1 text-[20px] font-DM font-bold mb-[35px]">
@@ -109,8 +119,11 @@ const Shop = () => {
                         {/* right section */}
                         <div className="w-[1180px]">
                             {/* top filter header */}
-                            <div className="mb-[60px] flex justify-between">
+                            <div className="mb-[60px] flex justify-between flex-wrap">
                                 <div className="flex items-center gap-5">
+                                    <div className="w-9 h-9 bg-black hover:bg-white border border-transparent hover:border-[#F0F0F0] flex justify-center items-center cursor-pointer group md:hidden">
+                                        <FaFilter className="text-sm text-white group-hover:text-black" />
+                                    </div>
                                     <div className="w-9 h-9 bg-black hover:bg-white border border-transparent hover:border-[#F0F0F0] flex justify-center items-center cursor-pointer group">
                                         <IoGrid className="text-sm text-white group-hover:text-black" />
                                     </div>

@@ -24,6 +24,14 @@ const items = [
         tag: "old",
     },
     {
+        img: pro_2,
+        tag: "old",
+    },
+    {
+        img: pro_3,
+        tag: "new",
+    },
+    {
         img: pro_3,
         tag: "new",
     },
@@ -821,7 +829,7 @@ const Paginations = ({ itemsPerPage }) => {
                 <Items currentItems={currentItems} />
             </div>
 
-            <div className="flex justify-between items-center">
+            <div className="flex justify-center sm:justify-between  items-center flex-wrap">
                 <ReactPaginate
                     breakLabel="..."
                     nextLabel=""
@@ -832,13 +840,14 @@ const Paginations = ({ itemsPerPage }) => {
                     renderOnZeroPageCount={null}
                     previousClassName="page-link hidden"
                     nextClassName="page-item hidden"
-                    containerClassName="pagination flex gap-x-4"
+                    containerClassName="pagination flex gap-4 flex-wrap"
                     pageLinkClassName="page-link w-9 h-9 border border-[#F0F0F0] text-color_1 inline-flex justify-center items-center"
                     activeClassName="active"
                     pageClassName="page-item "
                 />
                 <p className="text-color_1">
-                    Products from {itemOffset + 1} to {endOffset} of{"  "}
+                    Products from {itemOffset + 1} to
+                    {endOffset > items.length ? items.length : endOffset} of
                     {items.length}
                 </p>
             </div>
