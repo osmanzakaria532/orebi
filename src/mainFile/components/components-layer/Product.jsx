@@ -3,13 +3,22 @@ import Image from "./Image";
 import Flex from "./Flex";
 import ProductTag from "./ProductTag";
 
-const Product = ({ productImg, tagInnerContent, tagClassName }) => {
+const Product = ({
+    productImg,
+    tagInnerContent,
+    tagClassName,
+    productDetail,
+    price,
+}) => {
     return (
         <>
             <div className="">
                 <div className="relative group">
-                    <div className="w-full">
-                        <Image className="" src={productImg} />
+                    <div className="">
+                        <Image
+                            className="!h-[370px] !w-[370px] object-contain"
+                            src={productImg}
+                        />
                         <ProductTag
                             children={tagInnerContent}
                             tagClassName={` capitalize ${tagClassName}`}
@@ -73,9 +82,9 @@ const Product = ({ productImg, tagInnerContent, tagClassName }) => {
                 <div>
                     <Flex className="justify-between mb-[15px] pt-[24px]">
                         <p className="font-DM font-bold text-[20px] text-[#262626]">
-                            Basic Crew Neck Tee
+                            {productDetail}
                         </p>
-                        <p className="text-[16px] text-[#767676]">$44.00</p>
+                        <p className="text-[16px] text-[#767676]">${price}</p>
                     </Flex>
                     <div>
                         <p className="text-[16px] text-[#767676]">Black</p>

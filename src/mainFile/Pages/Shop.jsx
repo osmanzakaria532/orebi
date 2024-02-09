@@ -9,6 +9,7 @@ import { FaFilter } from "react-icons/fa6";
 
 import Filter from "../components/components-layer/Filter";
 import Paginations from "../../../src/mainFile/components/components-layer/Paginations";
+import LeftSideItem from "../components/components-layer/LeftSideItem";
 
 const Shop = () => {
     const [showProduct, setShowProduct] = useState(12);
@@ -35,7 +36,9 @@ const Shop = () => {
                     <div className="flex justify-between relative">
                         {/* left section */}
                         <div className="w-full md:w-[370px] absolute z-10 md:static">
-                            <div>
+                            <LeftSideItem icon={false} />
+                            <LeftSideItem icon={true} />
+                            {/* <div>
                                 <div className="mb-[53px]">
                                     <h4 className="text-Primary_1 text-[20px] font-DM font-bold mb-[35px]">
                                         Shop by Category
@@ -114,7 +117,7 @@ const Shop = () => {
                                         <Filter categoryName="$0.00 - $9.99" />
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         {/* right section */}
                         <div className="w-[1180px]">
