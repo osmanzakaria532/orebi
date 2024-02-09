@@ -10,6 +10,7 @@ import Image from "../components-layer/Image";
 import Flex from "../components-layer/Flex";
 import List from "../components-layer/List";
 import SubCategory from "../components-layer/SubCategory";
+import { Link } from "react-router-dom";
 
 const Searchbar = () => {
     useEffect(() => {
@@ -155,10 +156,12 @@ const Searchbar = () => {
                                 <LiItem
                                     liInnerContent="My Account"
                                     className="py-4 text-center bg-[#2B2B2B] text-white hover:bg-white hover:text-[#2B2B2B] border border-transparent hover:border-[#F0F0F0]"
+                                    href="/myaccount"
                                 />
                                 <LiItem
                                     liInnerContent="Log Out"
                                     className="py-4 text-center bg-[#2B2B2B] text-white hover:bg-white hover:text-[#2B2B2B] border border-transparent hover:border-[#F0F0F0]"
+                                    href="/login"
                                 />
                             </List>
                         </div>
@@ -196,12 +199,16 @@ const Searchbar = () => {
                                     </p>
                                 </div>
                                 <Flex className="gap-x-5">
-                                    <div className="py-4 w-[148px] text-center font-bold border border-[#262626] bg-[#262626] hover:bg-white text-white hover:text-[#262626] cursor-pointer">
-                                        View Cart
-                                    </div>
-                                    <div className="py-4 w-[148px] text-center font-bold border border-[#262626] bg-[#262626] hover:bg-white text-white hover:text-[#262626] cursor-pointer">
-                                        Checkout
-                                    </div>
+                                    <Link to="/cart">
+                                        <div className="py-4 w-[148px] text-center font-bold border border-[#262626] bg-[#262626] hover:bg-white text-white hover:text-[#262626] cursor-pointer">
+                                            View Cart
+                                        </div>
+                                    </Link>
+                                    <Link to="/checkout">
+                                        <div className="py-4 w-[148px] text-center font-bold border border-[#262626] bg-[#262626] hover:bg-white text-white hover:text-[#262626] cursor-pointer">
+                                            Checkout
+                                        </div>
+                                    </Link>
                                 </Flex>
                             </Flex>
                         </Flex>

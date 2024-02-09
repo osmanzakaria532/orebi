@@ -10,8 +10,10 @@ import axios from "axios";
 // import obi_3 from "../../../../src/assets/b_3.jpg";
 // import obi_4 from "../../../../src/assets/b_4.jpg";
 import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
 
 const OurBestsellers = () => {
+    let { pId } = useParams();
     let [allProduct, setAllProduct] = useState([
         // {
         //     id: 1,
@@ -52,40 +54,19 @@ const OurBestsellers = () => {
                         {allProduct.map(
                             (item) =>
                                 item.id <= 4 && (
-                                    <div className="">
+                                    <Link
+                                        to={`/productinsidedetails/${item.id}`}>
                                         <Product
-                                            productImg={item.images[0]}
+                                            productImg={item.thumbnail}
                                             tagInnerContent="New"
                                             tagClassName="w-[92px] h-[35px]"
                                             productDetail={item.title}
                                             price={item.price}
                                             className=""
                                         />
-                                    </div>
+                                    </Link>
                                 )
                         )}
-
-                        {/* <div>
-                            <Product
-                                productImg={obi_2}
-                                tagInnerContent="New"
-                                tagClassName="w-[92px] h-[35px]"
-                            />
-                        </div>
-                        <div>
-                            <Product
-                                productImg={obi_3}
-                                tagInnerContent="New"
-                                tagClassName="w-[92px] h-[35px]"
-                            />
-                        </div>
-                        <div>
-                            <Product
-                                productImg={obi_4}
-                                tagInnerContent="New"
-                                tagClassName="w-[92px] h-[35px]"
-                            />
-                        </div> */}
                     </div>
                 </Container>
             </ContainerFluid>

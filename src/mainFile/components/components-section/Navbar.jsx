@@ -58,6 +58,7 @@ const Navbar = () => {
                         <LiItem
                             liInnerContent="Contacts"
                             className="text-[#767676] hover:text-[#262626]"
+                            href="/contacts"
                         />
                         <LiItem
                             liInnerContent="Journal"
