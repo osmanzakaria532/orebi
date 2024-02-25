@@ -7,16 +7,16 @@ import Ads2 from "../components/components-section/Ads2";
 import SpecialOffers from "../components/components-section/SpecialOffers";
 
 const Home = () => {
-    return (
-        <>
-            <Banner />
-            <Ads />
-            <NewArrivals />
-            <OurBestsellers />
-            <Ads2 />
-            <SpecialOffers />
-        </>
-    );
+  return (
+    <>
+      <Banner />
+      <Ads />
+      <NewArrivals />
+      <OurBestsellers />
+      <Ads2 />
+      <SpecialOffers />
+    </>
+  );
 };
 
 export default Home;
